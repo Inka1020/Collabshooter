@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv4m6pcrsoraj"]
+
+[ext_resource type="Texture2D" uid="uid://q8ki1b62mq6m" path="res://images/arrow.png" id="1_dk4dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol8xx"]
+size = Vector2(500, 500)
+
+[node name="controller" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(286, 1728)
+rotation = 1.5708
+scale = Vector2(0.187311, 0.177344)
+texture_normal = ExtResource("1_dk4dp")
+shape = SubResource("RectangleShape2D_ol8xx")
+action = "right"
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(17, 1823)
+rotation = -1.56682
+scale = Vector2(0.187311, 0.177344)
+texture_normal = ExtResource("1_dk4dp")
+shape = SubResource("RectangleShape2D_ol8xx")
+action = "left"
