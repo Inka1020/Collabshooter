@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="firstcollabgame"
+config/name="collabshooter"
 run/main_scene="res://level_1.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmgyx638c3i7x"]
+[gd_scene load_steps=6 format=3 uid="uid://cmgyx638c3i7x"]
 
 [ext_resource type="PackedScene" uid="uid://dyyhdhthtts4u" path="res://player.tscn" id="1_0ab53"]
 [ext_resource type="PackedScene" uid="uid://c01lfjl7ftefd" path="res://spawner.tscn" id="3_n2x40"]
 [ext_resource type="PackedScene" uid="uid://cv4m6pcrsoraj" path="res://controller.tscn" id="4_hrqc0"]
 [ext_resource type="PackedScene" uid="uid://c7c6lj58wu2nu" path="res://scoreboard.tscn" id="4_sa64o"]
+[ext_resource type="PackedScene" uid="uid://dxagab2pcwr4u" path="res://boundary.tscn" id="5_2hct6"]
 
 [node name="level1" type="Node2D"]
 
@@ -11,8 +12,24 @@
 position = Vector2(554, 930)
 
 [node name="spawner" parent="." instance=ExtResource("3_n2x40")]
-position = Vector2(539, -39)
+position = Vector2(539, 16)
 
 [node name="scoreboard" parent="." instance=ExtResource("4_sa64o")]
 
 [node name="controller" parent="." instance=ExtResource("4_hrqc0")]
+
+[node name="boundary box" parent="." instance=ExtResource("5_2hct6")]
+position = Vector2(419, -162)
+scale = Vector2(59.6, 4.52)
+
+[node name="boundary box4" parent="." instance=ExtResource("5_2hct6")]
+position = Vector2(419, 2029)
+scale = Vector2(59.6, 4.52)
+
+[node name="boundary box2" parent="." instance=ExtResource("5_2hct6")]
+position = Vector2(-73, 940)
+scale = Vector2(3.28, 108.44)
+
+[node name="boundary box3" parent="." instance=ExtResource("5_2hct6")]
+position = Vector2(1144, 925)
+scale = Vector2(3.28, 108.44)
