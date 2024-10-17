@@ -14,17 +14,40 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="right" type="TouchScreenButton" parent="."]
-position = Vector2(286, 1728)
+position = Vector2(409, 1664)
 rotation = 1.5708
-scale = Vector2(0.187311, 0.177344)
+scale = Vector2(0.20755, 0.201147)
 texture_normal = ExtResource("1_dk4dp")
 shape = SubResource("RectangleShape2D_ol8xx")
 action = "right"
 
 [node name="left" type="TouchScreenButton" parent="."]
-position = Vector2(17, 1823)
+position = Vector2(46, 1763)
 rotation = -1.56682
-scale = Vector2(0.187311, 0.177344)
+scale = Vector2(0.20761, 0.205162)
 texture_normal = ExtResource("1_dk4dp")
 shape = SubResource("RectangleShape2D_ol8xx")
 action = "left"
+
+[node name="up" type="TouchScreenButton" parent="."]
+position = Vector2(181, 1546)
+rotation = -0.00869811
+scale = Vector2(0.20755, 0.201147)
+texture_normal = ExtResource("1_dk4dp")
+shape = SubResource("RectangleShape2D_ol8xx")
+action = "up"
+
+[node name="down" type="TouchScreenButton" parent="."]
+position = Vector2(283, 1883)
+rotation = 3.14525
+scale = Vector2(0.20755, 0.201147)
+texture_normal = ExtResource("1_dk4dp")
+shape = SubResource("RectangleShape2D_ol8xx")
+action = "down"
+
+[node name="shoot" type="TouchScreenButton" parent="."]
+position = Vector2(989, 1660)
+rotation = 1.5708
+scale = Vector2(0.20755, 0.201147)
+texture_normal = ExtResource("1_dk4dp")
+shape = SubResource("RectangleShape2D_ol8xx")
