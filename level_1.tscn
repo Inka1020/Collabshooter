@@ -18,18 +18,18 @@ position = Vector2(539, 16)
 
 [node name="controller" parent="." instance=ExtResource("4_hrqc0")]
 
-[node name="boundary box" parent="." instance=ExtResource("5_2hct6")]
-position = Vector2(419, -162)
-scale = Vector2(59.6, 4.52)
-
-[node name="boundary box4" parent="." instance=ExtResource("5_2hct6")]
+[node name="player boundary box" parent="." instance=ExtResource("5_2hct6")]
 position = Vector2(419, 2029)
 scale = Vector2(59.6, 4.52)
 
-[node name="boundary box2" parent="." instance=ExtResource("5_2hct6")]
-position = Vector2(-73, 940)
-scale = Vector2(3.28, 108.44)
+[node name="boundary box" parent="player boundary box" instance=ExtResource("5_2hct6")]
+position = Vector2(0, -463.274)
+scale = Vector2(1, 1)
 
-[node name="boundary box3" parent="." instance=ExtResource("5_2hct6")]
-position = Vector2(1144, 925)
-scale = Vector2(3.28, 108.44)
+[node name="boundary box3" parent="player boundary box" instance=ExtResource("5_2hct6")]
+position = Vector2(12.1644, -244.248)
+scale = Vector2(0.0550336, 23.9911)
+
+[node name="boundary box2" parent="player boundary box" instance=ExtResource("5_2hct6")]
+position = Vector2(-8.25503, -240.929)
+scale = Vector2(0.0550336, 23.9911)
