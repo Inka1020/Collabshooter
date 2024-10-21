@@ -7,6 +7,8 @@
 size = Vector2(50, 46)
 
 [node name="collectable" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_t1en0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
