@@ -24,12 +24,11 @@ scale = Vector2(59.6, 4.52)
 
 [node name="boundary box" parent="player boundary box" instance=ExtResource("5_2hct6")]
 position = Vector2(0, -463.274)
-scale = Vector2(1, 1)
 
 [node name="boundary box3" parent="player boundary box" instance=ExtResource("5_2hct6")]
 position = Vector2(12.1644, -244.248)
 scale = Vector2(0.0550336, 23.9911)
 
 [node name="boundary box2" parent="player boundary box" instance=ExtResource("5_2hct6")]
-position = Vector2(-8.25503, -240.929)
+position = Vector2(-1.77852, -240.929)
 scale = Vector2(0.0550336, 23.9911)

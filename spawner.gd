@@ -8,12 +8,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
-
-func _on_timer_timeout():
-	var newcollectable = collectable.instantiate()
-	add_child(newcollectable)
-	var spawnpos = randi_range(0,get_window().content_scale_size.x)
-	newcollectable.position.x = spawnpos
-	
+	var playerpos = get_parent().get_node("player").global_position
+	if Input.is_action_just_pressed("shoot"):
+		var newcollectable = collectable.instantiate()
+		add_child(newcollectable)
+		newcollectable.global_position = playerpos

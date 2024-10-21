@@ -51,3 +51,4 @@ rotation = 1.5708
 scale = Vector2(0.20755, 0.201147)
 texture_normal = ExtResource("1_dk4dp")
 shape = SubResource("RectangleShape2D_ol8xx")
+action = "shoot"
