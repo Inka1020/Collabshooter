@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv4m6pcrsoraj"]
+[gd_scene load_steps=4 format=3 uid="uid://cv4m6pcrsoraj"]
 
 [ext_resource type="Texture2D" uid="uid://q8ki1b62mq6m" path="res://images/arrow.png" id="1_dk4dp"]
+[ext_resource type="Texture2D" uid="uid://bfgxblnh2e1de" path="res://shoot button.png" id="2_6hbdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ol8xx"]
 size = Vector2(500, 500)
@@ -48,8 +49,14 @@ shape = SubResource("RectangleShape2D_ol8xx")
 action = "down"
 
 [node name="shoot" type="TouchScreenButton" parent="."]
-position = Vector2(975.351, 1696)
+position = Vector2(890, 1713)
 rotation = 1.5708
-scale = Vector2(0.202628, 0.198159)
-texture_normal = ExtResource("1_dk4dp")
+scale = Vector2(0.280741, 0.296178)
 shape = SubResource("RectangleShape2D_ol8xx")
+action = "shoot"
+
+[node name="Sprite2D" type="Sprite2D" parent="shoot"]
+position = Vector2(-0.000160217, 0.87867)
+rotation = -1.56894
+scale = Vector2(2.48201, 2.50282)
+texture = ExtResource("2_6hbdj")

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-var movespeed = 150
+var movespeed = 300
+var lives = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,8 +12,10 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("left"):
 		velocity.x = -movespeed
+		$Sprite2D.flip_h = false
 	elif Input.is_action_pressed("right"):
 		velocity.x = movespeed
+		$Sprite2D.flip_h = true
 	else:
 		velocity.x = 0
 	if Input.is_action_pressed("up"):
