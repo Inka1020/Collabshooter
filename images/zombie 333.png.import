@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfgxblnh2e1de"
-path="res://.godot/imported/shoot button.png-cac118b1c6b7b74df5e6bc16e392c52e.ctex"
+uid="uid://br8c3abr8yapv"
+path="res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shoot button.png"
-dest_files=["res://.godot/imported/shoot button.png-cac118b1c6b7b74df5e6bc16e392c52e.ctex"]
+source_file="res://images/zombie 333.png"
+dest_files=["res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"]
 
 [params]
 

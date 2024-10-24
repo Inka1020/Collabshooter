@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmrcm4nokij6"
-path="res://.godot/imported/robot 222.png-7ea6cc7aeec5e945ed5c1d752e1aea41.ctex"
+uid="uid://d176tbapya4g6"
+path="res://.godot/imported/zombie 222.png-9cc0991c7f32887ce4ea540fae915c0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://robot 222.png"
-dest_files=["res://.godot/imported/robot 222.png-7ea6cc7aeec5e945ed5c1d752e1aea41.ctex"]
+source_file="res://images/zombie 222.png"
+dest_files=["res://.godot/imported/zombie 222.png-9cc0991c7f32887ce4ea540fae915c0d.ctex"]
 
 [params]
 
