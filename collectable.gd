@@ -1,19 +1,13 @@
 extends Area2D
-var direction = 0
-var speed = 30
+var speed = 30#bullet speed
+var direction = 0#player's direction
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	if Input.is_action_pressed("left"):
-		direction = 1
-	if Input.is_action_pressed("right"):
-		direction = 2
-	if Input.is_action_pressed("up"):
-		direction = 3
-	if Input.is_action_pressed("down"):
-		direction = 4
+func _ready():#when spawned
+	direction = get_parent().dir #gets spawner's variable "dir"/player's direction
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(direction)
 	if direction == 1:
 		position.x = position.x-speed
 	if direction == 2:
@@ -22,9 +16,9 @@ func _process(delta):
 		position.y = position.y-speed
 	if direction == 4:
 		position.y = position.y+speed
-	if direction == 0:
-		queue_free()
-
+	if direction == 0: #this is checking if the direction was set properly, if 0 it is not
+		print(direction)
+#above code shoots bullet depending on whch way the player is faced
 
 func _on_body_entered(body):
-	queue_free()
+	queue_free() #temporary until enemies added
