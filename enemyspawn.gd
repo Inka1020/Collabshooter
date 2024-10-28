@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var score = get_parent().get_node("scoreboard").score
-	if score <= 2:
+	if score <= 2: #levels up based on score / changes enemies allowed based on score
 		level = 1
 	if score <= 5:
 		level = 2
@@ -20,8 +20,8 @@ func _process(delta: float) -> void:
 		level = score/3
 
 func _on_timer_timeout() -> void:
-	var spawnpositiony = randi_range(-800, 800)
-	var spawnpositionx = [0, 1320][randi_range(0, 1)]
+	var spawnpositiony = randi_range(-800, 800)#randomizes y position
+	var spawnpositionx = [0, 1320][randi_range(0, 1)]#randomizes whether they come from left or right
 	
 	if enemies < level:
 		var newenemy = enemy.instantiate()
