@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4olxtp8l482p"
-path="res://.godot/imported/scoreboard background.webp-3fa7abacc7b969b51721888eac98857b.ctex"
+uid="uid://4rh4nmidifnx"
+path="res://.godot/imported/enemies 2.png-f5fa1a55af9c34492bb977abf818cf29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scoreboard background.webp"
-dest_files=["res://.godot/imported/scoreboard background.webp-3fa7abacc7b969b51721888eac98857b.ctex"]
+source_file="res://images/enemies 2.png"
+dest_files=["res://.godot/imported/enemies 2.png-f5fa1a55af9c34492bb977abf818cf29.ctex"]
 
 [params]
 

@@ -1,16 +1,19 @@
 extends CharacterBody2D
 
 var movespeed = 300
+var spawnpos = 0
 var lives = 5
 var dir = 1#1 is left, 2 is right, 3 is up, 4 is down (sry if its a bit confusing)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	spawnpos = global_position
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if lives == 0:
+		get_tree().reload_current_scene()
 	if Input.is_action_pressed("left"):
 		velocity.x = -movespeed
 		$Sprite2D.flip_h = false #flips/unflips sprite
@@ -30,3 +33,9 @@ func _process(delta):
 	else:
 		velocity.y = 0
 	move_and_slide()
+
+
+func _on_area_entered(area: Area2D) -> void:
+	lives = lives - 1
+	global_position = spawnpos
+	print(lives)

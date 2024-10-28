@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfgxblnh2e1de"
-path="res://.godot/imported/shoot button.png-cac118b1c6b7b74df5e6bc16e392c52e.ctex"
+uid="uid://2l7hebti205r"
+path="res://.godot/imported/robot 111.png-faed424ed583e3a3782051568fef1978.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://shoot button.png"
-dest_files=["res://.godot/imported/shoot button.png-cac118b1c6b7b74df5e6bc16e392c52e.ctex"]
+source_file="res://images/robot 111.png"
+dest_files=["res://.godot/imported/robot 111.png-faed424ed583e3a3782051568fef1978.ctex"]
 
 [params]
 

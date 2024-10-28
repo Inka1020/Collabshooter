@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmgyx638c3i7x"]
+[gd_scene load_steps=7 format=3 uid="uid://cmgyx638c3i7x"]
 
 [ext_resource type="PackedScene" uid="uid://dyyhdhthtts4u" path="res://player.tscn" id="1_0ab53"]
+[ext_resource type="PackedScene" uid="uid://d2fhqyjpmdtna" path="res://enemyspawn.tscn" id="3_hn50f"]
 [ext_resource type="PackedScene" uid="uid://c01lfjl7ftefd" path="res://spawner.tscn" id="3_n2x40"]
 [ext_resource type="PackedScene" uid="uid://cv4m6pcrsoraj" path="res://controller.tscn" id="4_hrqc0"]
 [ext_resource type="PackedScene" uid="uid://c7c6lj58wu2nu" path="res://scoreboard.tscn" id="4_sa64o"]
@@ -13,6 +14,9 @@ position = Vector2(554, 930)
 
 [node name="spawner" parent="." instance=ExtResource("3_n2x40")]
 position = Vector2(539, 16)
+
+[node name="enemyspawn" parent="." instance=ExtResource("3_hn50f")]
+position = Vector2(1226, 929)
 
 [node name="scoreboard" parent="." instance=ExtResource("4_sa64o")]
 offset_left = 5.0
