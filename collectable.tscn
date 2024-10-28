@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg0vioco6wtir"]
 
 [ext_resource type="Script" path="res://collectable.gd" id="1_t1en0"]
-[ext_resource type="Texture2D" uid="uid://cj3oyylgk6ejp" path="res://icon.svg" id="2_15cuq"]
+[ext_resource type="Texture2D" uid="uid://dmqcd7mcuewot" path="res://icon.svg" id="2_15cuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5daiu"]
 size = Vector2(50, 46)
 
 [node name="collectable" type="Area2D"]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 8
+collision_mask = 16
 script = ExtResource("1_t1en0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

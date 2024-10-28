@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7c6lj58wu2nu"]
 
 [ext_resource type="Script" path="res://scoreboard.gd" id="1_cw0si"]
-[ext_resource type="Texture2D" uid="uid://b4olxtp8l482p" path="res://scoreboard background.webp" id="2_su7nl"]
+[ext_resource type="Texture2D" uid="uid://b4olxtp8l482p" path="res://images/scoreboard background.webp" id="2_su7nl"]
 
 [node name="scoreboard" type="Control"]
 layout_mode = 3
@@ -15,6 +15,7 @@ position = Vector2(303, 189)
 texture = ExtResource("2_su7nl")
 
 [node name="scoretext" type="Label" parent="."]
+layout_mode = 0
 offset_left = 118.0
 offset_top = 39.0
 offset_right = 1189.0

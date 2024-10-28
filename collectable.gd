@@ -21,4 +21,4 @@ func _process(delta):
 #above code shoots bullet depending on whch way the player is faced
 
 func _on_body_entered(body):
-	queue_free() #temporary until enemies added
+	queue_free()

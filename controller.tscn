@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cv4m6pcrsoraj"]
 
 [ext_resource type="Texture2D" uid="uid://q8ki1b62mq6m" path="res://images/arrow.png" id="1_dk4dp"]
-[ext_resource type="Texture2D" uid="uid://bfgxblnh2e1de" path="res://shoot button.png" id="2_6hbdj"]
+[ext_resource type="Texture2D" uid="uid://bfgxblnh2e1de" path="res://images/shoot button.png" id="2_6hbdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ol8xx"]
 size = Vector2(500, 500)

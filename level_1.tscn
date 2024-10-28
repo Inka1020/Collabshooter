@@ -16,7 +16,7 @@ position = Vector2(554, 930)
 position = Vector2(539, 16)
 
 [node name="enemyspawn" parent="." instance=ExtResource("3_hn50f")]
-position = Vector2(1237, 937)
+position = Vector2(1226, 929)
 
 [node name="scoreboard" parent="." instance=ExtResource("4_sa64o")]
 offset_left = 5.0
