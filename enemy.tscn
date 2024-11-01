@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxdfyrqdxiqbk"]
+[gd_scene load_steps=5 format=3 uid="uid://gjq8ig45hmql"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_2e262"]
 [ext_resource type="Texture2D" uid="uid://bec37ip3ebegl" path="res://images/robot 333.png" id="2_oou83"]

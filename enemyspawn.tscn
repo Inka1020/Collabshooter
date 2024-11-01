@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2fhqyjpmdtna"]
+[gd_scene load_steps=2 format=3 uid="uid://cm4myhx2juplg"]
 
 [ext_resource type="Script" path="res://enemyspawn.gd" id="1_53544"]
 
