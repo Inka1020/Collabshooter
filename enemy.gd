@@ -2,11 +2,15 @@ extends Area2D
 
 var yspeed = 0
 var xspeed = 0
+var lvlspeed = 0
 var pause = 1 #0 for unpaused, 1 for paused
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	lvlspeed = get_parent().level
+	if lvlspeed > 3:
+		lvlspeed = 3
+		print("speed", lvlspeed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,17 +36,17 @@ func _on_timer_timeout() -> void:
 	var playerx = get_parent().get_parent().get_node("player").global_position.x
 	
 	if global_position.y < playery:
-		yspeed = 2
+		yspeed = 1 + lvlspeed
 	elif global_position.y > playery:
-		yspeed = -2
+		yspeed = -1 - lvlspeed
 	else:
 		yspeed = 1
 
 	if global_position.x > playerx:
-		xspeed = -4
+		xspeed = -2 - lvlspeed
 		$AnimatedSprite2D.flip_h = true
 	elif global_position.x < playerx:
-		xspeed = 4
+		xspeed = 2 + lvlspeed
 		$AnimatedSprite2D.flip_h = false
 	else:
 		xspeed = 1
