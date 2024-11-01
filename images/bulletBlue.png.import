@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfs3s8n4etan"
-path="res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"
+uid="uid://uv7yq0q7opup"
+path="res://.godot/imported/bulletBlue.png-ea84fa9ab156e587e58eb8327b985975.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/zombie 333.png"
-dest_files=["res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"]
+source_file="res://images/bulletBlue.png"
+dest_files=["res://.godot/imported/bulletBlue.png-ea84fa9ab156e587e58eb8327b985975.ctex"]
 
 [params]
 

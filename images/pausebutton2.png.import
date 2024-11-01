@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfs3s8n4etan"
-path="res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"
+uid="uid://b4v6qah0s4e4s"
+path="res://.godot/imported/pausebutton2.png-3aec88ba83c18a689f176b1bebbe4059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/zombie 333.png"
-dest_files=["res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"]
+source_file="res://images/pausebutton2.png"
+dest_files=["res://.godot/imported/pausebutton2.png-3aec88ba83c18a689f176b1bebbe4059.ctex"]
 
 [params]
 
