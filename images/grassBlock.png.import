@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfs3s8n4etan"
-path="res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"
+uid="uid://bsh2vku7nwtxa"
+path="res://.godot/imported/grassBlock.png-4a499f258f1c38e78d8390af36856850.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/zombie 333.png"
-dest_files=["res://.godot/imported/zombie 333.png-994378589829532deec7e5e5cefc06a1.ctex"]
+source_file="res://images/grassBlock.png"
+dest_files=["res://.godot/imported/grassBlock.png-4a499f258f1c38e78d8390af36856850.ctex"]
 
 [params]
 

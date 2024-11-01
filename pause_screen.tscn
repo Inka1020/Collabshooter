@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://di7xdc6ltffeh"]
+
+[ext_resource type="Script" path="res://pause_screen.gd" id="1_6pqe3"]
+[ext_resource type="Texture2D" uid="uid://b4v6qah0s4e4s" path="res://images/pausebutton2.png" id="2_7mu8p"]
+
+[node name="pause screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pqe3")
+
+[node name="pausebtn" type="TouchScreenButton" parent="."]
+position = Vector2(943, 13)
+scale = Vector2(0.075625, 0.073125)
+texture_normal = ExtResource("2_7mu8p")
+action = "pause"
+
+[node name="Pause" type="Label" parent="."]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 546.0
+offset_right = 900.0
+offset_bottom = 819.0
+theme_override_font_sizes/font_size = 200
+text = "Start"
+horizontal_alignment = 1
+
+[node name="belowtext" type="Label" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 781.0
+offset_right = 879.0
+offset_bottom = 850.0
+theme_override_font_sizes/font_size = 50
+text = "Press top right to begin!"
+horizontal_alignment = 1

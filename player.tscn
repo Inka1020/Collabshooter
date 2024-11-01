@@ -1,34 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyyhdhthtts4u"]
+[gd_scene load_steps=8 format=3 uid="uid://dyyhdhthtts4u"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_r3paj"]
-[ext_resource type="Texture2D" uid="uid://b8w6o4h8sos63" path="res://images/player1.png" id="2_b380b"]
+[ext_resource type="Texture2D" uid="uid://dltkuwitds1a7" path="res://images/character_femaleAdventurer_idle.png" id="2_2rscy"]
+[ext_resource type="Texture2D" uid="uid://dp6odjlnu6c6e" path="res://images/character_female1.png" id="3_d04kw"]
+[ext_resource type="Texture2D" uid="uid://b5goy51swga8t" path="res://images/character_female2.png" id="4_lajyw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwtph"]
-size = Vector2(107, 158)
+size = Vector2(109, 148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhpqf"]
-size = Vector2(133, 168)
+size = Vector2(120, 155)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ku5cl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2rscy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_d04kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lajyw")
+}],
+"loop": true,
+"name": &"run",
+"speed": 3.0
+}]
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_r3paj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -3.8147e-06)
-scale = Vector2(1.45313, 1.28125)
-texture = ExtResource("2_b380b")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.5, 3)
+position = Vector2(14.5, 11)
 shape = SubResource("RectangleShape2D_iwtph")
 
 [node name="hitbox" type="Area2D" parent="."]
 collision_layer = 2
-collision_mask = 16
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(12.5, 3)
+position = Vector2(14, 11.5)
 shape = SubResource("RectangleShape2D_vhpqf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12.75, -11.25)
+scale = Vector2(1.46354, 1.49609)
+sprite_frames = SubResource("SpriteFrames_ku5cl")
+animation = &"idle"
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_area_entered"]
