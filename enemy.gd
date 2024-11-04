@@ -7,9 +7,15 @@ var pause = 1 #0 for unpaused, 1 for paused
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	lvlspeed = get_parent().level
-	if lvlspeed > 3:
-		lvlspeed = 3
+	lvlspeed = get_parent().score
+	if lvlspeed >= 10:
+		lvlspeed = randi_range(-1, 2)
+	if lvlspeed > 25:
+		lvlspeed = randi_range(-1, 3)
+	if lvlspeed > 50:
+		lvlspeed = randi_range(-1, 5)
+	else:
+		lvlspeed = randi_range(-1, 1)
 		print("speed", lvlspeed)
 
 
@@ -36,17 +42,17 @@ func _on_timer_timeout() -> void:
 	var playerx = get_parent().get_parent().get_node("player").global_position.x
 	
 	if global_position.y < playery:
-		yspeed = 1 + lvlspeed
+		yspeed = 2 + lvlspeed
 	elif global_position.y > playery:
-		yspeed = -1 - lvlspeed
+		yspeed = -2 - lvlspeed
 	else:
 		yspeed = 1
 
 	if global_position.x > playerx:
-		xspeed = -2 - lvlspeed
+		xspeed = -3 - lvlspeed
 		$AnimatedSprite2D.flip_h = true
 	elif global_position.x < playerx:
-		xspeed = 2 + lvlspeed
+		xspeed = 3 + lvlspeed
 		$AnimatedSprite2D.flip_h = false
 	else:
 		xspeed = 1
