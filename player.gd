@@ -14,15 +14,19 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if lives == 0:
-		get_tree().reload_current_scene()
-	
 	if Input.is_action_just_pressed("pause"):
 		if pause == 0:
 			pause = 1
 			$AnimatedSprite2D.play("idle")
-		else:
+		if pause == 1:
 			pause = 0
+			
+	if lives == 0:
+		if pause > -1:
+			pause = -2
+			Input.action_press("pause")
+			$AnimatedSprite2D.play("dead")
+		#get_tree().reload_current_scene()
 			
 	if pause == 0:
 		if Input.is_action_pressed("left"):

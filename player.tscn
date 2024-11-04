@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyyhdhthtts4u"]
+[gd_scene load_steps=10 format=3 uid="uid://dyyhdhthtts4u"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_r3paj"]
 [ext_resource type="Texture2D" uid="uid://dltkuwitds1a7" path="res://images/character_femaleAdventurer_idle.png" id="2_2rscy"]
+[ext_resource type="Texture2D" uid="uid://ftbc8h3i47up" path="res://images/ghost.png" id="2_j5wey"]
+[ext_resource type="Texture2D" uid="uid://dnv4hl36unrkq" path="res://images/ghost_dead.png" id="3_7lip6"]
 [ext_resource type="Texture2D" uid="uid://dp6odjlnu6c6e" path="res://images/character_female1.png" id="3_d04kw"]
 [ext_resource type="Texture2D" uid="uid://b5goy51swga8t" path="res://images/character_female2.png" id="4_lajyw"]
 
@@ -13,6 +15,17 @@ size = Vector2(120, 155)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ku5cl"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j5wey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7lip6")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_2rscy")
@@ -54,6 +67,6 @@ shape = SubResource("RectangleShape2D_vhpqf")
 position = Vector2(12.75, -11.25)
 scale = Vector2(1.46354, 1.49609)
 sprite_frames = SubResource("SpriteFrames_ku5cl")
-animation = &"idle"
+animation = &"dead"
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_area_entered"]
