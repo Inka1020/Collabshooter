@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cg0vioco6wtir"]
 
-[ext_resource type="Script" path="res://collectable.gd" id="1_t1en0"]
+[ext_resource type="Script" path="res://collectable.gd" id="1_npdk0"]
 [ext_resource type="Texture2D" uid="uid://gc1wkrvt07yi" path="res://images/bulletSand1.png" id="2_h2k8m"]
 [ext_resource type="Texture2D" uid="uid://51j604qcc1md" path="res://images/bulletSand2.png" id="3_gb0ik"]
 
@@ -29,6 +29,7 @@ animations = [{
 [node name="collectable" type="Area2D"]
 collision_layer = 8
 collision_mask = 16
+script = ExtResource("1_npdk0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5daiu")
