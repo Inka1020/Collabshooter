@@ -1,13 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://gjq8ig45hmql"]
+[gd_scene load_steps=7 format=3 uid="uid://cxdfyrqdxiqbk"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_2e262"]
-[ext_resource type="Texture2D" uid="uid://bec37ip3ebegl" path="res://images/robot 333.png" id="2_oou83"]
+[ext_resource type="Texture2D" uid="uid://230dwygm2f4l" path="res://images/zombie 111.png" id="2_gc756"]
+[ext_resource type="Texture2D" uid="uid://drfs3s8n4etan" path="res://images/zombie 333.png" id="3_63s4l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hilwm"]
 size = Vector2(68, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_640s5"]
 size = Vector2(84, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3iibq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gc756")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_63s4l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gc756")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="enemy" type="Area2D"]
 collision_layer = 16
@@ -18,21 +41,22 @@ script = ExtResource("1_2e262")
 position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_hilwm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
-texture = ExtResource("2_oou83")
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
 [node name="enemyhitbox" type="Area2D" parent="."]
-collision_layer = 16
+collision_layer = 32
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyhitbox"]
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_640s5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -11)
+sprite_frames = SubResource("SpriteFrames_3iibq")
+animation = &"idle"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,21 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg0vioco6wtir"]
+[gd_scene load_steps=6 format=3 uid="uid://cg0vioco6wtir"]
 
-[ext_resource type="Texture2D" uid="uid://dmqcd7mcuewot" path="res://icon.svg" id="2_15cuq"]
+[ext_resource type="Script" path="res://collectable.gd" id="1_t1en0"]
+[ext_resource type="Texture2D" uid="uid://gc1wkrvt07yi" path="res://images/bulletSand1.png" id="2_h2k8m"]
+[ext_resource type="Texture2D" uid="uid://51j604qcc1md" path="res://images/bulletSand2.png" id="3_gb0ik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5daiu"]
-size = Vector2(50, 46)
+size = Vector2(38, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7unn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h2k8m")
+}],
+"loop": true,
+"name": &"ns",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gb0ik")
+}],
+"loop": true,
+"name": &"we",
+"speed": 5.0
+}]
 
 [node name="collectable" type="Area2D"]
 collision_layer = 8
 collision_mask = 16
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-scale = Vector2(0.382813, 0.382813)
-texture = ExtResource("2_15cuq")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_5daiu")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3.625, 3.0625)
+sprite_frames = SubResource("SpriteFrames_w7unn")
+animation = &"we"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
