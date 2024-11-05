@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7c6lj58wu2nu"]
+[gd_scene load_steps=2 format=3 uid="uid://c7c6lj58wu2nu"]
 
 [ext_resource type="Script" path="res://scoreboard.gd" id="1_cw0si"]
+<<<<<<< Updated upstream
 [ext_resource type="FontFile" uid="uid://du1otkac2mqx7" path="res://Starborn.ttf" id="2_0m00x"]
+=======
+>>>>>>> Stashed changes
 
 [node name="scoreboard" type="Control"]
 layout_mode = 3
