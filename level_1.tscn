@@ -11,13 +11,15 @@
 [node name="level1" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_0ab53")]
-position = Vector2(554, 930)
+position = Vector2(521, 950)
 
 [node name="spawner" parent="." instance=ExtResource("3_n2x40")]
 position = Vector2(539, 16)
 
 [node name="enemyspawn" parent="." instance=ExtResource("3_hn50f")]
 position = Vector2(1226, 929)
+
+[node name="pause screen" parent="." instance=ExtResource("7_nwmwl")]
 
 [node name="scoreboard" parent="." instance=ExtResource("4_sa64o")]
 offset_left = 5.0
@@ -41,5 +43,3 @@ scale = Vector2(0.0550336, 23.9911)
 [node name="boundary box2" parent="player boundary box" instance=ExtResource("5_2hct6")]
 position = Vector2(-8.17114, -240.929)
 scale = Vector2(0.0550336, 23.9911)
-
-[node name="pause screen" parent="." instance=ExtResource("7_nwmwl")]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 var movespeed = 300
 var spawnpos = 0
 var lives = 5
-var pause = 1 #0 for unpause 1 for pause
+var pause = 1
 var dir = 1#1 is left, 2 is right, 3 is up, 4 is down (sry if its a bit confusing)
 
 # Called when the node enters the scene tree for the first time.
@@ -18,10 +18,13 @@ func _process(delta):
 		if pause == 0:
 			pause = 1
 			$AnimatedSprite2D.play("idle")
-		if pause == 1:
+			print("paused")
+		elif pause == 1:
 			pause = 0
-			
+			print("unpaused")
+		
 	if lives == 0:
+		print(lives, "is zero")
 		if pause > -1:
 			pause = -2
 			Input.action_press("pause")

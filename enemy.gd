@@ -7,16 +7,20 @@ var pause = 1 #0 for unpaused, 1 for paused
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	lvlspeed = get_parent().score
-	if lvlspeed >= 10:
-		lvlspeed = randi_range(-1, 2)
-	if lvlspeed > 25:
-		lvlspeed = randi_range(-1, 3)
-	if lvlspeed > 50:
-		lvlspeed = randi_range(-1, 5)
-	else:
+	lvlspeed = get_parent().score #modifies enemy speed based on score
+	if lvlspeed == 0:
+		lvlspeed = randi_range(-1, 0)#chooses a random amount to change the enemy's speed by
+	elif lvlspeed <= 15:
 		lvlspeed = randi_range(-1, 1)
-		print("speed", lvlspeed)
+	elif lvlspeed < 35:
+		lvlspeed = randi_range(0, 2)
+	elif lvlspeed < 50:
+		lvlspeed = randi_range(0, 3)
+	elif lvlspeed < 150:
+		lvlspeed = randi_range(1, 3)
+	elif lvlspeed > 149:
+		lvlspeed = randi_range(2, 5)
+	print("enemy's speed", lvlspeed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

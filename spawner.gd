@@ -1,6 +1,6 @@
 extends Node2D
 
-var collectable = preload("res://collectable.tscn")
+var bullet = preload("res://bullet.tscn")
 var dir = 0
 var pause = 1
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +21,6 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("shoot"): #shoot is right click
 		if pause == 0:
-			var newcollectable = collectable.instantiate()
-			add_child(newcollectable)
-			newcollectable.global_position = playerpos #sends collectable to players global position
+			var newbullet = bullet.instantiate()
+			add_child(newbullet)
+			newbullet.global_position = playerpos #sends bullet to players global position

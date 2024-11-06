@@ -23,20 +23,22 @@ func _process(delta: float) -> void:
 		else:
 			timer = 1
 			$Timer.set_paused(true)
-			print("enemy spawner timer paused")
+			#print("enemy spawner timer paused")
 	
 	if score <= 2: #levels up based on score / changes enemies allowed based on score
 		level = 1
-	if score <= 5:
+	elif score <= 5:
 		level = 2
-	else:
+	elif score <= 30:
 		level = score/3
+	else:
+		level = 11
 
 func _on_timer_timeout() -> void:
 	var spawnpositiony = randi_range(-800, 800)#randomizes y position
 	var spawnpositionx = [0, 1320][randi_range(0, 1)]#randomizes whether they come from left or right
 	
-	print("timer timedout")
+	#print("timer timedout")
 	
 	if enemies < level:
 		var newenemy = enemy.instantiate()

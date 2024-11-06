@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 			$belowtext.text = "Press below to resume"
 			$Pause.show()
 			$belowtext.show()
-		if pause == -1:
+		elif pause == -1:
 			get_tree().reload_current_scene()
 		else:
 			pause = 0
@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 		pause = -1
 		$pausebtn.hide()
 		$Pause.text = "Died!"
-		$belowtext.text = "Press below to restart"
+		$belowtext.text = "Double tap below 
+		to restart"
 		$Pause.show()
 		$belowtext.show()
